@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 10 fév. 2023 à 11:16
+-- Généré le : lun. 13 fév. 2023 à 21:17
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -52,13 +52,35 @@ CREATE TABLE `msg_generals` (
 CREATE TABLE `Users` (
   `id` int(60) NOT NULL,
   `nom` varchar(60) NOT NULL,
-  `prénom` varchar(60) NOT NULL,
+  `prenom` varchar(60) NOT NULL,
   `pseudo` varchar(60) NOT NULL,
   `password` varchar(60) NOT NULL,
   `statut` varchar(60) NOT NULL,
   `renit` varchar(60) NOT NULL,
-  `email` text NOT NULL
+  `email` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `Users`
+--
+ALTER TABLE `Users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `pseudo` (`pseudo`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `Users`
+--
+ALTER TABLE `Users`
+  MODIFY `id` int(60) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
