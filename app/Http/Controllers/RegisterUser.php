@@ -21,15 +21,6 @@ class RegisterUser extends Controller
 
     public function registre(Request $request)
     {
-        $request->validate([
-            'nom' => 'required|string|max:255',
-            'prenom' => 'required|string|max:255',
-            'pseudo' => 'required|string|max:255|unique:users',
-            'password' => 'required|string|confirmed',
-            'renit' => 'required|string',
-            'email' => 'required|string|max:255|unique:users'
-        ]);
-
         $user = new User();
         $user->nom = $request->nom;
         $user->prenom = $request->prenom;
