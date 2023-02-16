@@ -35,13 +35,11 @@ Laravel est un framework d'application Web le plus sécurisé avec une syntaxe e
 
 1. Naviguer au niveau du dossier et lancer la commande `composer update`(vérifier l'installation de les modules php)
 2. Lancer la commande " `php artisan key:generate`
-3. Lancer le WebServeur sur XAMPP afin d’accéder au
-  « localhost » .
-4. Lancer la commande pour démarrer le serveur: `php artisan serve`.
-5. Copier le fichier chat.sql dans votre serveur base de données
-6. Aller dans le fichier .env
-7. Mettre les informations de votre serveur de BDD et celles de bdd du projet : DB_CONNECTION jusqu'à DB_PASSWORD
-8. Accéder via navigateur au localhost : `http://127.0.0.1:8000`
+3. Lancer la commande pour démarrer le serveur: `php artisan serve`.
+4. Copier le fichier chat.sql dans votre serveur base de données
+5. Aller dans le fichier .env
+6. Mettre les informations de votre serveur de BDD et celles de bdd du projet : DB_CONNECTION jusqu'à DB_PASSWORD
+7. Accéder via navigateur au localhost : `http://127.0.0.1:8000`
 
 - Dans la table Users : les mots de passes sont chiffrés automatiquement par une fonction de hachage « Hash make » afin de sécuriser ce champ.
   
