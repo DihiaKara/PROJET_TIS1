@@ -22,6 +22,7 @@ Laravel est un framework d'application Web le plus sécurisé avec une syntaxe e
 
 ## Base de Données 
 * MySQL -> phpMyAdmin 
+* Accès admin -> admin/admin
 
 ## Technologies 
 * Bootstrap
@@ -30,15 +31,17 @@ Laravel est un framework d'application Web le plus sécurisé avec une syntaxe e
 * pattern MVC (model - view- controller)
 
 
-## Mode d'emploi
+## Mode d'emploi : Etapes 
 
-* Installer "Laravel"
-* Lancer la commande " `composer update `" pour l'installation globale
-* Lancer le WebServeur sur XAMPP afin d’accéder au
+1. Naviguer au niveau du dossier et lancer la commande `composer update`(vérifier l'installation de les modules php)
+2. Lancer la commande " `php artisan key:generate`
+3. Lancer le WebServeur sur XAMPP afin d’accéder au
   « localhost » .
-* Lancer à partir du terminal le Server développement Laravel via une commande : `php artisan serve`.
-
-- La BDD contiendras les tables suivantes qu’on retrouveras dans les fichiers code
+4. Lancer la commande pour démarrer le serveur: `php artisan serve`.
+5. Copier le fichier chat.sql dans votre serveur base de données
+6. Aller dans le fichier .env
+7. Mettre les informations de votre serveur de BDD et celles de bdd du projet : DB_CONNECTION jusqu'à DB_PASSWORD
+8. Accéder via navigateur au localhost : `http://127.0.0.1:8000`
 
 - Dans la table Users : les mots de passes sont chiffrés automatiquement par une fonction de hachage « Hash make » afin de sécuriser ce champ.
   
@@ -56,7 +59,4 @@ Laravel est un framework d'application Web le plus sécurisé avec une syntaxe e
    B. En tant qu’Etudiant :
 - Une fois authentifié en tant que student l’accès est directement à cette page
   Le bouton « Envoyer un message » redirige vers le canal général du Chat. Une fois le message saisi et envoyé ! Celui-ci s’affiche instantanément sur le canal des messages et s’ajoute à la BDD.
- 
-* Accéder via navigateur au localhost : `http://127.0.0.1:8000`
-# PROJET_TIS
-# PROJET_1
+
